@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Chúc mừng ngày 19/11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Be+Vietnam+Pro:wght@300;400;600&family=La+Belle+Aurore&display=swap">
+<style>
+:root{--ink:#f4f1ff;--mut:#b9b4e8;--pur:#6b3df5;--blu:#2f6bff;--cy:#19b5ff;--pk:#ff6fcf;--hd:"Unbounded","Be Vietnam Pro","Segoe UI",Arial,sans-serif;--bd:"Be Vietnam Pro","Segoe UI",Roboto,Arial,sans-serif;color-scheme:dark;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:var(--bd);color:var(--ink);min-height:100vh;overflow-x:hidden;background:linear-gradient(180deg,#03031a 0%,#08083a 40%,#14107a 80%,#1f1a9c 100%) fixed}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:rgba(107,61,245,.55);top:-120px;left:-100px}
+.b2{width:460px;height:460px;background:rgba(25,120,255,.45);bottom:-140px;right:-120px;animation-duration:18s}
+.b3{width:300px;height:300px;background:rgba(255,111,207,.28);top:45%;left:50%;animation-duration:11s}
+@keyframes drift{to{transform:translate(80px,-60px) scale(1.25)}}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.ticker{position:fixed;top:0;left:0;right:0;z-index:4;padding-top:env(safe-area-inset-top,0px);background:rgba(60,50,200,.35);border-bottom:1px solid rgba(120,160,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);overflow:hidden;height:calc(38px + env(safe-area-inset-top,0px))}
+.track{display:inline-flex;white-space:nowrap;line-height:38px;font-family:var(--hd);font-size:12px;font-weight:500;animation:mq 28s linear infinite}
+.track span{padding:0 22px;color:#d9d3ff}
+@keyframes mq{to{transform:translateX(-50%)}}
+.page{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:calc(66px + env(safe-area-inset-top,0px)) 18px 50px;text-align:center}
+h1{font-family:var(--hd);font-weight:800;margin:6px 0 0;white-space:nowrap;font-size:clamp(14px,4.4vw,40px);letter-spacing:-.01em;background:linear-gradient(90deg,#fff,#a9c4ff,#ff9be0,#fff);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.to{display:inline-block;margin:16px 0 4px;padding:8px 22px;border-radius:999px;border:1.5px solid var(--cy);background:rgba(25,181,255,.12);box-shadow:0 0 22px rgba(25,181,255,.35);font-size:15px;animation:float 3.2s ease-in-out infinite}
+.to b{font-family:var(--hd);font-weight:700;color:#fff}
+@keyframes float{50%{transform:translateY(-5px)}}
+.sub{margin:10px 0 18px;font-weight:300;color:var(--mut);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
+.tile{cursor:pointer;font:inherit;color:inherit;border:1.5px solid rgba(70,150,255,.6);border-radius:18px;padding:16px 8px;background:linear-gradient(160deg,rgba(120,70,255,.38),rgba(20,70,170,.38));box-shadow:0 0 0 rgba(0,0,0,0);transition:transform .25s,box-shadow .25s,background .25s;animation:in .7s both}
+.tile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10px 28px rgba(60,120,255,.45)}
+.tile .e{font-size:30px;display:block;animation:float 3s ease-in-out infinite}
+.tile .l{font-family:var(--hd);font-weight:700;font-size:13px;display:block;margin-top:6px}
+.tile .n{font-size:11px;color:var(--mut);display:block;margin-top:2px}
+.tile.on{background:linear-gradient(160deg,#ff6fcf,#7a5cff 60%,#2f7bff);border-color:#fff;box-shadow:0 0 30px rgba(255,111,207,.6)}
+.tile.on .n{color:#fff}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.94)}to{opacity:1;transform:none}}
+.stage{perspective:900px;margin-top:22px}
+.card{position:relative;min-height:230px;padding:26px 22px 22px;border-radius:26px;border:2.5px solid transparent;background:linear-gradient(#0d0b3f,#17117a) padding-box,linear-gradient(135deg,#ff6fcf,#7a5cff,#19b5ff) border-box;box-shadow:0 0 40px rgba(122,92,255,.5);animation:glow 3s ease-in-out infinite;transition:transform .15s}
+@keyframes glow{50%{box-shadow:0 0 70px rgba(255,111,207,.55)}}
+.card.swap .txt{animation:in .6s both}
+.tag{display:inline-block;font-family:var(--hd);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,var(--pur),var(--blu));margin-bottom:14px}
+.card .hello{font-family:var(--hd);font-size:15px;font-weight:700;margin:0 0 10px}
+.txt{font-size:17px;line-height:1.85;font-weight:300;margin:0;min-height:120px}
+.ph{font-weight:300;color:var(--mut);font-size:16px;margin:30px 0}
+.btns{display:none;margin-top:18px;gap:10px;justify-content:center;flex-wrap:wrap}
+.card.has .btns{display:flex}.card.has .ph{display:none}.card:not(.has) .tag,.card:not(.has) .hello,.card:not(.has) .txt{display:none}
+button.b{font:inherit;font-size:14px;font-weight:600;cursor:pointer;color:#fff;border:1.5px solid rgba(255,255,255,.55);background:rgba(255,255,255,.1);padding:10px 18px;border-radius:999px;transition:transform .2s}
+button.b:hover{transform:translateY(-2px)}
+button.f{background:linear-gradient(135deg,var(--pur),var(--blu));border-color:transparent;box-shadow:0 6px 22px rgba(80,90,255,.55)}
+.tools{margin-top:16px;display:flex;justify-content:center}
+.hint{margin-top:22px;font-size:13px;font-weight:300;color:var(--mut)}
+#start,#modal{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;background:rgba(3,3,26,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:opacity .6s}
+#start.hide{opacity:0;pointer-events:none}
+#start h2{font-family:var(--hd);font-weight:800;font-size:clamp(18px,5vw,26px);margin:0}
+#start p{margin:0;font-weight:300;color:var(--mut)}
+#nm{font:inherit;font-size:18px;text-align:center;color:#fff;background:rgba(255,255,255,.1);border:1.5px solid rgba(120,160,255,.6);border-radius:999px;padding:13px 20px;width:min(310px,80vw);outline:none}
+#nm:focus{border-color:var(--pk);box-shadow:0 0 22px rgba(255,111,207,.4)}
+#nm::placeholder{color:rgba(255,255,255,.45)}
+#modal{display:none;z-index:20}
+#modal.show{display:flex}
+#modal img{max-width:min(420px,88vw);max-height:68vh;border-radius:18px;box-shadow:0 0 50px rgba(122,92,255,.6)}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;background:#1c1780;border:1px solid var(--cy);padding:10px 18px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none}
+#toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<canvas id="cv"></canvas>
+
+<div class="ticker"><div class="track" id="trk"></div></div>
+
+<div id="start">
+  <div style="font-size:54px">✨</div>
+  <h2>Có một lời chúc dành cho bạn</h2>
+  <p>Hãy nhập tên của bạn nhé</p>
+  <input id="nm" type="text" maxlength="30" placeholder="Tên của bạn" autocomplete="off">
+  <button class="b f" id="open">Mở thiệp 🎆</button>
+</div>
+
+<div class="page">
+  <h1>Chúc mừng ngày 19/11</h1>
+  <div class="to">✦ Gửi <b id="who">bạn</b> ✦</div>
+  <p class="sub">Chọn một mục để nhận lời chúc dành riêng cho bạn</p>
+  <div class="grid" id="grid"></div>
+
+  <div class="stage"><div class="card" id="card">
+    <p class="ph">Chạm vào một mục phía trên để nhận lời chúc 💫</p>
+    <span class="tag" id="tag"></span>
+    <p class="hello" id="hello"></p>
+    <p class="txt" id="txt"></p>
+    <div class="btns">
+      <button class="b f" id="more">🔄 Lời chúc khác</button>
+      <button class="b" id="save">📸 Lưu ảnh</button>
+    </div>
+  </div></div>
+
+  <div class="tools"><button class="b" id="mute">🔊 Tắt nhạc</button></div>
+  <div class="hint">Chạm vào bất kỳ đâu để bắn pháo hoa ✨</div>
+</div>
+
+<div id="modal">
+  <img id="pic" alt="Thiệp chúc mừng">
+  <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+    <button class="b f" id="dl" style="display:none">⬇️ Tải ảnh về</button>
+    <button class="b" id="close">Đóng</button>
+  </div>
+  <div class="hint" id="mhint" style="margin:0">Trên điện thoại, bạn có thể nhấn giữ vào ảnh để lưu</div>
+</div>
+<div id="toast"></div>
+
+<script>
+(function(){
+  var CATS = [
+    {e:"🕊️",t:"Bình an",w:[
+      "Chúc bạn một đời bình an, mỗi ngày đều ngập tràn niềm vui, luôn gặp những điều dịu dàng và may mắn. Mong những điều tốt đẹp nhất sẽ luôn đến với bạn, công việc thuận lợi, mọi dự định đều suôn sẻ và những cố gắng của bạn đều được đền đáp xứng đáng.",
+      "Chúc bạn có những ngày thật nhẹ nhàng, lòng luôn bình yên dù ngoài kia có bao nhiêu bộn bề. Mong bạn luôn được bao quanh bởi những người yêu thương và những điều ấm áp.",
+      "Mong mọi lo toan của bạn sẽ hóa thành nhẹ nhõm, mọi mệt mỏi đều có chỗ nghỉ ngơi, và mỗi buổi sáng thức dậy bạn đều thấy lòng mình thật an yên.",
+      "Chúc bạn luôn giữ được một góc bình yên trong tim, để dù cuộc sống có bận rộn đến đâu vẫn thấy lòng nhẹ tênh.",
+      "Mong mỗi ngày trôi qua đều là một ngày dịu dàng với bạn, không vội vã, không muộn phiền.",
+      "Chúc bạn ngủ thật ngon, thức dậy thật tươi và gặp thật nhiều điều êm đềm trong ngày.",
+      "Mong những ồn ào ngoài kia không làm bạn chùn bước, và bạn luôn tìm thấy sự an nhiên trong chính mình.",
+      "Chúc bạn bình an trên mọi chặng đường, đi xa hay ở gần đều có người thương nhớ và mong bạn trở về.",
+      "Chúc bạn có thật nhiều khoảnh khắc yên tĩnh để lắng nghe trái tim mình và thấy mình thật đủ đầy.",
+      "Mong cuộc sống sẽ luôn đối xử dịu dàng với bạn, như cách bạn đã đối xử tử tế với mọi người."]},
+    {e:"💼",t:"Sự nghiệp",w:[
+      "Chúc bạn công việc luôn thuận buồm xuôi gió, gặp được nhiều cơ hội tốt và những người đồng hành đáng quý. Mọi nỗ lực của bạn rồi sẽ nở hoa đúng lúc.",
+      "Chúc bạn tự tin theo đuổi mọi dự định, vững vàng trước thử thách và luôn tiến thêm một bước gần hơn đến ước mơ của mình.",
+      "Mong thời gian sắp tới mang đến cho bạn những thành công rực rỡ, những cột mốc đáng nhớ và niềm tự hào về chính mình.",
+      "Chúc bạn luôn có những ý tưởng thật hay, những quyết định thật sáng suốt và những người đồng nghiệp thật đáng tin.",
+      "Mong con đường sự nghiệp của bạn luôn rộng mở, mỗi bước đi đều vững vàng và đầy cảm hứng.",
+      "Chúc bạn đạt được mọi mục tiêu đã đặt ra, và còn vượt xa hơn những gì bạn từng nghĩ.",
+      "Chúc bạn gặp được những dự án thú vị, những người thầy đáng quý và những cơ hội xứng tầm với năng lực của mình.",
+      "Mong sự chăm chỉ của bạn luôn được ghi nhận, và mỗi thành quả đều mang đến cho bạn thật nhiều niềm vui.",
+      "Chúc bạn luôn học hỏi không ngừng, trưởng thành từng ngày và tỏa sáng theo cách riêng của mình.",
+      "Chúc công việc của bạn thật suôn sẻ, tiền vào như nước và tinh thần luôn thoải mái.",
+      "Mong mọi nỗ lực của bạn đều được đền đáp, mọi ước mơ đều có ngày thành hiện thực và mọi hành trình đều có những điều đáng nhớ.",
+      "Chúc bạn vững vàng với những lựa chọn của mình, đủ bản lĩnh để vượt qua thử thách và đủ kiên trì để chạm đến những mục tiêu lớn.",
+      "Chúc bạn luôn có đủ tự tin để thử sức với những điều mới, đủ can đảm để nắm bắt cơ hội và đủ sáng suốt để lựa chọn con đường phù hợp.",
+      "Mong con đường sự nghiệp của bạn luôn rộng mở, công việc thuận buồm xuôi gió, những cố gắng đều được đền đáp bằng những thành tựu xứng đáng. Mong bạn gặp đúng cơ hội, đúng người đồng hành, luôn được trân trọng và ghi nhận. Chúc bạn ngày càng thành công, tài chính vững vàng, có đủ năng lực để theo đuổi những điều lớn lao và đủ tự do để tận hưởng thành quả mà mình đã nỗ lực tạo nên. ❤️"]},
+    {e:"💪",t:"Sức khỏe",w:[
+      "Chúc bạn luôn khỏe mạnh, tràn đầy năng lượng để làm những điều mình yêu thích. Hãy nhớ nghỉ ngơi và chăm sóc bản thân thật tốt nhé.",
+      "Chúc bạn thân thể khỏe, tinh thần vững, giấc ngủ ngon và những buổi sáng thật tươi mới.",
+      "Mong bạn luôn giữ được sự dẻo dai, bền bỉ và một tâm hồn thật trẻ trung, yêu đời.",
+      "Chúc bạn có một cơ thể dẻo dai, một trái tim khỏe và một tinh thần luôn lạc quan.",
+      "Mong bạn luôn ăn ngon, ngủ yên và có đủ sức để chạm tay vào mọi điều mình mơ ước.",
+      "Chúc bạn mỗi ngày đều tràn đầy sinh lực, bước đi nhẹ nhàng và nụ cười luôn tươi tắn.",
+      "Mong những mệt mỏi sẽ nhanh chóng tan biến, nhường chỗ cho sự khỏe khoắn và tràn đầy năng lượng.",
+      "Chúc bạn luôn biết yêu thương bản thân, nghỉ ngơi đúng lúc và giữ gìn sức khỏe thật tốt.",
+      "Chúc bạn vừa khỏe người, vừa khỏe lòng, để mọi điều tốt đẹp đều có thể đến với mình.",
+      "Mong sức khỏe luôn là người bạn đồng hành vững chãi, cùng bạn đi qua mọi chặng đường dài."]},
+    {e:"🍀",t:"May mắn",w:[
+      "Chúc bạn luôn gặp may mắn trên mọi nẻo đường, quý nhân phù trợ, bước đến đâu cũng có điều tốt đẹp chờ sẵn.",
+      "Chúc bạn mỗi ngày đều có một điều bất ngờ nho nhỏ thật dễ thương, và những cánh cửa mới luôn rộng mở.",
+      "Mong vận may luôn mỉm cười với bạn, để mọi điều bạn mong ước đều đến đúng lúc, đúng nơi.",
+      "Chúc bạn luôn đi đúng đường, gặp đúng người và làm đúng việc vào đúng thời điểm.",
+      "Mong may mắn đến gõ cửa bạn mỗi ngày, mang theo thật nhiều niềm vui và những tin tốt lành.",
+      "Chúc bạn có đôi mắt biết nhìn thấy cơ hội, đôi tay biết nắm lấy và một trái tim đủ can đảm để bước tiếp.",
+      "Mong mọi khó khăn trên đường của bạn đều có người giúp, mọi ngã rẽ đều dẫn đến điều tốt đẹp.",
+      "Chúc bạn như được trời thương, làm gì cũng thuận, nghĩ gì cũng thành.",
+      "Chúc bạn luôn được quý nhân phù trợ, bình an và may mắn ở bất cứ nơi đâu.",
+      "Mong những điều ngẫu nhiên trong đời bạn đều là những điều dễ thương và đáng nhớ."]},
+    {e:"💖",t:"Hạnh phúc",w:[
+      "Chúc bạn có một gia đình ấm áp, những người bạn chân thành và thật nhiều tiếng cười mỗi ngày.",
+      "Chúc bạn luôn được yêu thương đúng cách, biết trân trọng những điều giản dị và tìm thấy hạnh phúc trong từng khoảnh khắc nhỏ bé.",
+      "Mong trái tim bạn luôn ấm áp, nụ cười luôn rạng rỡ và cuộc sống luôn đủ đầy niềm vui.",
+      "Chúc bạn có thật nhiều bữa cơm ấm cúng, thật nhiều cái ôm chặt và thật nhiều lần cười đến đau bụng.",
+      "Mong bạn luôn có người để sẻ chia, có chỗ để trở về và có lý do để mỉm cười mỗi ngày.",
+      "Chúc bạn luôn được bao quanh bởi những người thương yêu bạn thật lòng.",
+      "Mong cuộc sống của bạn luôn rực rỡ sắc màu, ngập tràn tiếng cười và đong đầy yêu thương.",
+      "Chúc bạn hạnh phúc theo cách mà bạn mong muốn, bình yên mà vẫn ngập tràn niềm vui.",
+      "Mong mỗi buổi tối trở về, bạn đều thấy lòng mình ấm áp và biết ơn vì một ngày đã qua.",
+      "Mong những ngày bình thường nhất cũng trở nên thật đẹp, những điều nhỏ bé cũng đủ khiến bạn mỉm cười.",
+      "Mong bạn gặp được nhiều người tử tế, nhận được thật nhiều yêu thương và chẳng bao giờ phải hoài nghi về giá trị của bản thân.",
+      "Mong dù đi đâu, làm gì, bạn cũng luôn tìm thấy một nơi để trở về, một người để sẻ chia và một lý do để hạnh phúc.",
+      "Mong cuộc sống đối xử dịu dàng với bạn, mong những điều bạn âm thầm mong đợi rồi sẽ có ngày thành sự thật.",
+      "Mong con đường sự nghiệp của bạn luôn rộng mở, công việc thuận buồm xuôi gió, những cố gắng đều được đền đáp bằng những thành tựu xứng đáng. Mong bạn gặp đúng cơ hội, đúng người đồng hành, luôn được trân trọng và ghi nhận. Chúc bạn ngày càng thành công, tài chính vững vàng, có đủ năng lực để theo đuổi những điều lớn lao và đủ tự do để tận hưởng thành quả mà mình đã nỗ lực tạo nên.",
+      "Chúc bạn sớm có được một em ghệ tone hồng, ngoan xinh yêu, biết ăn ngon, ngủ ngoan, biết thương bạn và luôn đồng hành cùng bạn. Yêu đương thì ngọt ngào, giận hờn thì nhanh hết, mỗi ngày đều có người nhắc ngủ sớm, hỏi han ăn uống và cùng bạn đi qua những ngày bình thường nhất.",
+      "Chúc bạn sớm tìm được một người bạn đồng hành, một người luôn sẵn sàng lắng nghe những câu chuyện dù vui hay buồn, kiên nhẫn chia sẻ những áp lực trong cuộc sống cùng bạn.",
+      "Chúc bạn sớm tìm được chân ái, yêu đúng người và được yêu đúng cách, không cần đoán ý, không cần chờ đợi và không phải buồn vì những điều không đáng. Mọi chuyện không thành trong quá khứ hãy cất vào một góc và đón nhận thật nhiều điều hạnh phúc mới đang chờ phía trước nhá.",
+      "Mong cuộc sống bạn luôn vui vẻ, hạnh phúc dù một mình hay hai mình. Dù có người đồng hành hay đang tận hưởng hành trình riêng, bạn vẫn luôn tìm thấy niềm vui trong những điều nhỏ bé, biết yêu thương bản thân và cảm thấy đủ đầy với cuộc sống hiện tại.",
+      "Mong bạn luôn hạnh phúc dù bên cạnh có ai hay không. Khi một mình, vẫn đủ bình yên để tận hưởng cuộc sống; khi có đôi, vẫn đủ yêu thương để cùng nhau đi qua những tháng ngày dài. Mong hạnh phúc của bạn không phụ thuộc vào bất kỳ ai, mà luôn bắt đầu từ chính trái tim mình.",
+      "Mong bạn dù một mình hay hai mình cũng luôn vui vẻ, yêu đời. Một mình thì có thật nhiều trải nghiệm thú vị, hai mình thì có thêm người sẻ chia những vui buồn. Dù ở trạng thái nào, cũng mong bạn luôn được sống những ngày tháng thật đẹp."]},
+    {e:"🌟",t:"Ước mơ",w:[
+      "Chúc bạn giữ mãi ngọn lửa đam mê, dám mơ lớn và đủ kiên trì để biến từng giấc mơ thành hiện thực.",
+      "Chúc mọi dự định của bạn đều suôn sẻ, và những cố gắng thầm lặng đều được đền đáp xứng đáng.",
+      "Mong bạn luôn tìm thấy ánh sao dẫn đường, để dù đêm có tối đến đâu vẫn thấy hướng đi phía trước.",
+      "Chúc bạn không ngừng tin tưởng vào bản thân, vì bạn xứng đáng với những điều tuyệt vời nhất.",
+      "Mong từng ước mơ của bạn đều có ngày nở hoa, dù hôm nay mới chỉ là hạt giống nhỏ.",
+      "Chúc bạn đủ dũng cảm để bắt đầu, đủ kiên trì để tiếp tục và đủ may mắn để chạm tới đích.",
+      "Chúc bạn luôn tràn đầy cảm hứng, luôn tìm thấy điều mới mẻ và luôn dám sống hết mình với đam mê.",
+      "Mong mọi dự định của bạn đều thành hiện thực, và bạn sẽ mỉm cười tự hào khi nhìn lại chặng đường đã qua.",
+      "Chúc bạn có một năm thật rực rỡ, nơi những giấc mơ cũ trở thành sự thật và những giấc mơ mới bắt đầu.",
+      "Mong bạn luôn giữ được đôi mắt trong veo của người dám mơ, và đôi chân vững vàng của người dám làm."]}
+  ];
+  var $ = function(id){ return document.getElementById(id); };
+
+  // ticker
+  var words = CATS.map(function(k){ return "✦ " + k.t; }).concat(["✦ 19/11"]), h = "";
+  for(var r = 0; r < 8; r++) words.forEach(function(w){ h += "<span>" + w + "</span>"; });
+  $("trk").innerHTML = h;
+
+  // ---- canvas: stars, shooting stars, fireworks
+  var cv = $("cv"), c = cv.getContext("2d"), W, H, stars = [], shooters = [], rockets = [], sparks = [], t = 0;
+  function initStars(){
+    stars = []; var n = Math.round(W*H/4200);
+    for(var i = 0; i < n; i++) stars.push({x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.4 + .3, p:Math.random()*6.28, s:.01 + Math.random()*.04, h:Math.random() < .25 ? 320 : (Math.random() < .5 ? 210 : 255)});
+  }
+  function size(){ W = cv.width = innerWidth; H = cv.height = innerHeight; initStars(); }
+  function shooter(){
+    var a = Math.PI*(.15 + Math.random()*.15), sp = 9 + Math.random()*6, d = Math.random() < .5 ? 1 : -1;
+    shooters.push({x:Math.random()*W*.8 + W*.1, y:Math.random()*H*.35, vx:Math.cos(a)*sp*d, vy:Math.sin(a)*sp, life:1, len:90 + Math.random()*90});
+  }
+  setInterval(function(){ if(Math.random() < .8) shooter(); }, 2000);
+  var pal = [[255,90,160],[255,200,80],[90,190,255],[170,120,255],[110,255,200],[255,255,255]];
+  function launch(tx, ty){
+    var sx = Math.max(30, Math.min(W - 30, tx + (Math.random()-.5)*160));
+    rockets.push({x:sx, y:H, vx:(tx - sx)/55, vy:(ty - H)/55, t:0, col:pal[(Math.random()*pal.length)|0]}); whoosh();
+  }
+  function explode(x, y, col){
+    var k = (Math.random()*3)|0, n = 70 + ((Math.random()*40)|0), c2 = pal[(Math.random()*pal.length)|0];
+    for(var i = 0; i < n; i++){
+      var a = 6.283*i/n, sp = k === 1 ? 4.5 : 1.5 + Math.random()*4.2, alt = k === 2 && i % 2;
+      sparks.push({x:x, y:y, vx:Math.cos(a)*sp*(alt ? .55 : 1), vy:Math.sin(a)*sp*(alt ? .55 : 1), life:1, d:.011 + Math.random()*.01, col:alt ? c2 : col});
+    }
+    boom();
+  }
+  function auto(){ launch(W*(.15 + Math.random()*.7), H*(.1 + Math.random()*.35)); }
+  function frame(){
+    t++; c.globalCompositeOperation = "source-over"; c.clearRect(0, 0, W, H);
+    stars.forEach(function(s){
+      var a = .3 + .7*Math.abs(Math.sin(s.p + t*s.s));
+      c.globalAlpha = a; c.fillStyle = "hsl(" + s.h + ",85%,88%)"; c.beginPath(); c.arc(s.x, s.y, s.r, 0, 6.28); c.fill();
+      if(s.r > 1.2){ c.globalAlpha = a*.5; c.fillRect(s.x - s.r*3, s.y - .4, s.r*6, .8); c.fillRect(s.x - .4, s.y - s.r*3, .8, s.r*6); }
+    });
+    c.globalAlpha = 1;
+    shooters = shooters.filter(function(s){ return s.life > 0; });
+    shooters.forEach(function(s){
+      s.x += s.vx; s.y += s.vy; s.life -= .014;
+      var m = Math.hypot(s.vx, s.vy), tx = s.x - s.vx/m*s.len, ty = s.y - s.vy/m*s.len, g = c.createLinearGradient(s.x, s.y, tx, ty);
+      g.addColorStop(0, "rgba(255,255,255," + s.life + ")"); g.addColorStop(1, "rgba(255,255,255,0)");
+      c.strokeStyle = g; c.lineWidth = 2; c.lineCap = "round"; c.beginPath(); c.moveTo(s.x, s.y); c.lineTo(tx, ty); c.stroke();
+    });
+    c.globalCompositeOperation = "lighter";
+    rockets = rockets.filter(function(r){
+      r.x += r.vx; r.y += r.vy; r.t++;
+      c.fillStyle = "rgba(255,230,180,.9)"; c.beginPath(); c.arc(r.x, r.y, 2, 0, 6.28); c.fill();
+      sparks.push({x:r.x, y:r.y, vx:(Math.random()-.5)*.4, vy:Math.random()*.6, life:.5, d:.05, col:[255,200,120]});
+      if(r.t >= 55){ explode(r.x, r.y, r.col); return false; } return true;
+    });
+    sparks = sparks.filter(function(p){ return p.life > 0; });
+    sparks.forEach(function(p){
+      p.vx *= .98; p.vy = p.vy*.98 + .05; p.x += p.vx; p.y += p.vy; p.life -= p.d;
+      c.fillStyle = "rgba(" + p.col[0] + "," + p.col[1] + "," + p.col[2] + "," + Math.max(p.life, 0) + ")";
+      c.beginPath(); c.arc(p.x, p.y, 1.8*Math.max(p.life, .3), 0, 6.28); c.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  size(); addEventListener("resize", size); frame();
+
+  // ---- audio: dreamy chill loop
+  var AC = window.AudioContext || window.webkitAudioContext, ctx, master, padF, echoIn, noiseBuf, playing = false, muted = false, timer, nextT, ci = 0;
+  var chords = [[60,64,67,72],[55,59,62,67],[57,60,64,69],[53,57,60,65]], pat = [0,1,2,3,2,1,2,3], BAR = 3.0;
+  function mf(n){ return 440*Math.pow(2, (n - 69)/12); }
+  function kick(st){ var o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.setValueAtTime(140, st); o.frequency.exponentialRampToValueAtTime(45, st + .12); g.gain.setValueAtTime(.5, st); g.gain.exponentialRampToValueAtTime(.001, st + .22); o.connect(g); g.connect(master); o.start(st); o.stop(st + .25); }
+  function hat(st){ var s = ctx.createBufferSource(), g = ctx.createGain(), f = ctx.createBiquadFilter(); s.buffer = noiseBuf; f.type = "highpass"; f.frequency.value = 7000; g.gain.setValueAtTime(.08, st); g.gain.exponentialRampToValueAtTime(.001, st + .05); s.connect(f); f.connect(g); g.connect(master); s.start(st); s.stop(st + .06); }
+  function note(f, st, d, type, vol, dest, att){
+    var o = ctx.createOscillator(), g = ctx.createGain(); att = att || .02;
+    o.type = type; o.frequency.value = f; g.gain.setValueAtTime(0, st);
+    g.gain.linearRampToValueAtTime(vol, st + att); g.gain.exponentialRampToValueAtTime(.001, st + d);
+    o.connect(g); g.connect(dest || master); o.start(st); o.stop(st + d + .05);
+  }
+  function playBar(){
+    if(!playing) return;
+    var ch = chords[ci++ % 4], st = nextT; nextT += BAR;
+    ch.forEach(function(m){ note(mf(m), st, BAR, "triangle", .05, padF, .05); });
+    for(var b = 0; b < 4; b++){ var bt = st + b*.75; note(mf((b % 2 ? ch[2] : ch[0]) - 12), bt, .6, "sine", .2, master, .01); if(b % 2 === 0) kick(bt); hat(bt + .375); }
+    for(var i = 0; i < 8; i++) note(mf(ch[pat[i]] + 12), st + i*.375, .5, "triangle", .1, echoIn, .005);
+    timer = setTimeout(playBar, Math.max(200, (nextT - ctx.currentTime - .6)*1000));
+  }
+  function noise(d, vol, f0, f1){
+    var s = ctx.createBufferSource(), g = ctx.createGain(), fl = ctx.createBiquadFilter(), st = ctx.currentTime;
+    s.buffer = noiseBuf; fl.type = "lowpass"; fl.frequency.setValueAtTime(f0, st); fl.frequency.exponentialRampToValueAtTime(f1, st + d);
+    g.gain.setValueAtTime(vol, st); g.gain.exponentialRampToValueAtTime(.001, st + d);
+    s.connect(fl); fl.connect(g); g.connect(master); s.start(st); s.stop(st + d);
+  }
+  function whoosh(){ return; var o = ctx.createOscillator(), g = ctx.createGain(), st = ctx.currentTime; o.frequency.setValueAtTime(300, st); o.frequency.exponentialRampToValueAtTime(1100, st + .9); g.gain.setValueAtTime(.04, st); g.gain.exponentialRampToValueAtTime(.001, st + .9); o.connect(g); g.connect(master); o.start(st); o.stop(st + .95); }
+  function boom(){ return; noise(.6, .6, 1800, 120); note(70, ctx.currentTime, .4, "sine", .35); }
+  function startAudio(){
+    try{
+      if(!ctx){
+        ctx = new AC(); master = ctx.createGain(); master.gain.value = .32; master.connect(ctx.destination);
+        padF = ctx.createBiquadFilter(); padF.type = "lowpass"; padF.frequency.value = 900; padF.connect(master);
+        echoIn = ctx.createGain(); echoIn.connect(master);
+        var dl = ctx.createDelay(); dl.delayTime.value = .45; var fb = ctx.createGain(); fb.gain.value = .4;
+        echoIn.connect(dl); dl.connect(fb); fb.connect(dl); dl.connect(master);
+        noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+        var d = noiseBuf.getChannelData(0); for(var i = 0; i < d.length; i++) d[i] = Math.random()*2 - 1;
+      }
+      if(ctx.state === "suspended") ctx.resume();
+      playing = true; nextT = ctx.currentTime + .1; playBar();
+    }catch(e){}
+  }
+
+  // ---- wishes UI
+  var cat = -1, idx = 0, tw, name = "bạn", cur = "";
+  var grid = $("grid"), card = $("card");
+  CATS.forEach(function(k, i){
+    var b = document.createElement("button"); b.className = "tile"; b.style.animationDelay = (i*.08) + "s";
+    b.innerHTML = '<span class="e">' + k.e + '</span><span class="l">' + k.t + '</span>';
+    b.addEventListener("click", function(){ show(i, i === cat); });
+    grid.appendChild(b);
+  });
+  function show(ci, next){
+    var k = CATS[ci];
+    if(ci !== cat){ cat = ci; idx = (Math.random()*k.w.length)|0; } else if(next){ var j; do{ j = (Math.random()*k.w.length)|0; }while(j === idx); idx = j; }
+    Array.prototype.forEach.call(grid.children, function(el, i){ el.classList.toggle("on", i === ci); });
+    cur = k.w[idx];
+    $("tag").textContent = k.e + " " + k.t;
+    $("hello").textContent = "Gửi " + name + ",";
+    card.classList.add("has"); card.classList.remove("swap"); void card.offsetWidth; card.classList.add("swap");
+    clearInterval(tw); var el = $("txt"), n = 0; el.textContent = "";
+    tw = setInterval(function(){ n += 2; el.textContent = cur.slice(0, n); if(n >= cur.length) clearInterval(tw); }, 22);
+    setTimeout(auto, 0); setTimeout(auto, 350);
+    if(window.innerWidth < 560) card.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  $("more").addEventListener("click", function(){ if(cat >= 0) show(cat, true); });
+
+  // tilt
+  var stage = card.parentNode;
+  stage.addEventListener("pointermove", function(e){
+    var b = card.getBoundingClientRect(), x = (e.clientX - b.left)/b.width - .5, y = (e.clientY - b.top)/b.height - .5;
+    card.style.transform = "rotateY(" + (x*10) + "deg) rotateX(" + (-y*8) + "deg)";
+  });
+  stage.addEventListener("pointerleave", function(){ card.style.transform = ""; });
+
+  // ---- open
+  var opened = false;
+  function openCard(){
+    if(opened) return; opened = true;
+    name = $("nm").value.trim() || "bạn"; $("who").textContent = name;
+    $("start").classList.add("hide"); if(AC) startAudio();
+    [0, 300, 650, 1000].forEach(function(d){ setTimeout(auto, d); });
+    setInterval(auto, 3000);
+  }
+  $("open").addEventListener("click", openCard);
+  $("nm").addEventListener("keydown", function(e){ if(e.key === "Enter") openCard(); });
+  document.addEventListener("pointerdown", function(e){
+    if(!opened || e.target.closest("button,input,#modal")) return; launch(e.clientX, e.clientY);
+  });
+  var mb = $("mute");
+  mb.addEventListener("click", function(){
+    muted = !muted;
+    if(muted){ playing = false; clearTimeout(timer); mb.textContent = "🔈 Bật nhạc"; } else { startAudio(); mb.textContent = "🔊 Tắt nhạc"; }
+  });
+
+  // ---- save as image
+  var dlCap = null, lastCanvas = null;
+  if(window.claude && claude.use) claude.use("downloads").then(function(d){ dlCap = d; }).catch(function(){});
+  function toast(m){ var el = $("toast"); el.textContent = m; el.classList.add("show"); setTimeout(function(){ el.classList.remove("show"); }, 2200); }
+  function rr(x, a, b, w, hh, r){ x.beginPath(); x.moveTo(a + r, b); x.arcTo(a + w, b, a + w, b + hh, r); x.arcTo(a + w, b + hh, a, b + hh, r); x.arcTo(a, b + hh, a, b, r); x.arcTo(a, b, a + w, b, r); x.closePath(); }
+  function wrap(x, text, mw){
+    var ws = text.split(" "), lines = [], l = "";
+    ws.forEach(function(w){ var tl = l ? l + " " + w : w; if(x.measureText(tl).width > mw && l){ lines.push(l); l = w; } else l = tl; });
+    if(l) lines.push(l); return lines;
+  }
+  async function makeImage(){
+    try{ await Promise.all([document.fonts.load("800 40px Unbounded"), document.fonts.load("700 30px Unbounded"), document.fonts.load("300 30px \"Be Vietnam Pro\""), document.fonts.load("600 30px \"Be Vietnam Pro\""), document.fonts.load("40px \"La Belle Aurore\"")]); }catch(e){}
+    var w = 1080, hh = 1350, cc = document.createElement("canvas"); cc.width = w; cc.height = hh; var x = cc.getContext("2d");
+    var g = x.createLinearGradient(0, 0, w*.4, hh); g.addColorStop(0, "#03031a"); g.addColorStop(.5, "#0f0b5c"); g.addColorStop(1, "#3a1fa8");
+    x.fillStyle = g; x.fillRect(0, 0, w, hh);
+    [[200,200,420,"rgba(107,61,245,.5)"],[900,1150,480,"rgba(25,120,255,.4)"],[820,450,300,"rgba(255,111,207,.25)"]].forEach(function(b){
+      var rg = x.createRadialGradient(b[0], b[1], 0, b[0], b[1], b[2]); rg.addColorStop(0, b[3]); rg.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = rg; x.fillRect(0, 0, w, hh);
+    });
+    var sd = 7; function rnd(){ sd = (sd*16807) % 2147483647; return sd/2147483647; }
+    for(var i = 0; i < 160; i++){ x.globalAlpha = .3 + rnd()*.7; x.fillStyle = "#fff"; x.beginPath(); x.arc(rnd()*w, rnd()*hh, .6 + rnd()*1.8, 0, 6.28); x.fill(); }
+    x.globalAlpha = 1;
+    var sg = x.createLinearGradient(780, 120, 560, 260); sg.addColorStop(0, "rgba(255,255,255,.95)"); sg.addColorStop(1, "rgba(255,255,255,0)");
+    x.strokeStyle = sg; x.lineWidth = 4; x.lineCap = "round"; x.beginPath(); x.moveTo(780, 120); x.lineTo(560, 260); x.stroke();
+    x.textAlign = "center"; x.textBaseline = "alphabetic";
+    var T = "Chúc mừng ngày 19/11", fs = 76;
+    do{ x.font = "800 " + fs + "px Unbounded, sans-serif"; fs -= 2; }while(x.measureText(T).width > 940 && fs > 20);
+    var tg = x.createLinearGradient(100, 0, 980, 0); tg.addColorStop(0, "#fff"); tg.addColorStop(.5, "#a9c4ff"); tg.addColorStop(1, "#ff9be0");
+    x.fillStyle = tg; x.shadowColor = "rgba(160,140,255,.8)"; x.shadowBlur = 30; x.fillText(T, w/2, 210); x.shadowBlur = 0;
+    x.font = "700 40px Unbounded, sans-serif"; var gt = "✦ Gửi " + name + " ✦", pw = Math.min(x.measureText(gt).width + 90, 960);
+    x.fillStyle = "rgba(25,181,255,.14)"; rr(x, w/2 - pw/2, 270, pw, 84, 42); x.fill(); x.strokeStyle = "#19b5ff"; x.lineWidth = 3; x.stroke();
+    x.fillStyle = "#fff"; x.fillText(gt, w/2, 326);
+    var sz = 44, lines, lh;
+    for(; sz >= 28; sz -= 2){ x.font = "300 " + sz + "px \"Be Vietnam Pro\", sans-serif"; lh = sz*1.6; lines = wrap(x, cur, 800); if(400 + lines.length*lh + 150 <= 1180) break; }
+    var bh = lines.length*lh + 150, y0 = 400;
+    var cg = x.createLinearGradient(80, y0, 1000, y0 + bh); cg.addColorStop(0, "rgba(13,11,63,.9)"); cg.addColorStop(1, "rgba(23,17,122,.9)");
+    rr(x, 80, y0, 920, bh, 44); x.fillStyle = cg; x.fill();
+    var bg = x.createLinearGradient(80, y0, 1000, y0 + bh); bg.addColorStop(0, "#ff6fcf"); bg.addColorStop(.5, "#7a5cff"); bg.addColorStop(1, "#19b5ff");
+    x.strokeStyle = bg; x.lineWidth = 5; x.stroke();
+    x.font = "600 30px \"Be Vietnam Pro\", sans-serif"; x.fillStyle = "#ffb8ea"; x.fillText(CATS[cat].e + " " + CATS[cat].t, w/2, y0 + 70);
+    x.font = "300 " + sz + "px \"Be Vietnam Pro\", sans-serif"; x.fillStyle = "#f4f1ff";
+    lines.forEach(function(l, i){ x.fillText(l, w/2, y0 + 140 + i*lh); });
+    x.font = "64px \"La Belle Aurore\", cursive"; var dg = x.createLinearGradient(300, 0, 780, 0); dg.addColorStop(0, "#ffd98a"); dg.addColorStop(1, "#ff9be0");
+    x.fillStyle = dg; x.shadowColor = "rgba(255,200,120,.6)"; x.shadowBlur = 24; x.fillText("Best wishes for u,XH", w/2, 1290); x.shadowBlur = 0;
+    return cc;
+  }
+  $("save").addEventListener("click", async function(){
+    if(cat < 0) return; var b = this; b.disabled = true;
+    try{
+      lastCanvas = await makeImage(); $("pic").src = lastCanvas.toDataURL("image/png");
+      $("dl").style.display = dlCap ? "" : "none"; $("modal").classList.add("show");
+    }catch(e){ toast("Chưa tạo được ảnh, bạn thử lại nhé"); }
+    b.disabled = false;
+  });
+  $("close").addEventListener("click", function(){ $("modal").classList.remove("show"); });
+  $("dl").addEventListener("click", function(){
+    if(!dlCap || !lastCanvas) return;
+    lastCanvas.toBlob(function(blob){
+      dlCap.save({filename:"loi-chuc-19-11.png", data:blob}).then(function(){ toast("Đã lưu ảnh ✨"); }).catch(function(e){
+        if(e && e.code !== "declined") toast("Chưa lưu được, hãy nhấn giữ vào ảnh để lưu");
+      });
+    }, "image/png");
+  });
+})();
+</script>
+</body>
+</html>
